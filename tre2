@@ -1,0 +1,28 @@
+# Förra årets genomgång: https://www.youtube.com/watch?v=lkTwC7rn148&ab_channel=HampusEriksson
+
+# Skapa en lista - square brackets - alt gr + 8
+from curses.ascii import isdigit
+
+
+mobiler = ["iPhone 14", "One plus", "Blackberry", "Samsung 22"]
+
+# len()
+print(len(mobiler))
+# Index - börjar på 0
+print(mobiler[3])
+
+# Index bakvänt - börjar på -1
+print(mobiler[-1])
+
+print(mobiler)
+# Lägga till - append
+mobiler.append("Huwaei")
+print(mobiler)
+# Ta bort - remove
+mobiler.remove("One plus")
+print(mobiler)
+
+# Ta ut - pop
+en_mobil = mobiler.pop()
+print(en_mobil)
+
