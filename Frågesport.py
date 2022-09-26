@@ -1,34 +1,70 @@
+def easy_quiz():
+    score = 0
+    print("Welcome to the easy quiz.")
+    ans1 = input("vilken färg är dina ögon?").lower()
+    if ans1 == ("brun"):
+        print ("helt rätt")
+        score +=5
+
+    else: print("tyvärr fel")
+
+    return score
+
+
+def hard_quiz():
+    score = 0
+    print("Welcome to the hard quiz.")
+    ans1 = input("Vad är sveriges huvudstad?").lower()
+    if ans1 == ("stockholm"):
+        print("helt rätt")
+        score +=5
+
+    else: print("tyvärr fel")
+
+    return score
+
+
+def superhard_quiz():
+    score =0
+    ans1 = input("Vad finns i centrala Paris?").lower()
+    if ans1 == ("r"):
+        print ("helt rätt")
+        score +=5
+    else: print("tyvärr fel")
+
+    ans2 = input("Om det finns ett blått hus till höger om dig och ett rött hus till vänster, var är det vita huset?").lower()
+    if ans2 == ("i washington"):
+        print ("helt rätt")
+        score +=5
+    else: print("tyvärr fel.")
+
+    return score
+
+    
+    
+
+
+namn = input("Namn: ")
 score = 0
 
-ögon = input("vilken färg är dina ögon?").capitalize()
-if ögon == ("Brun"):
-    print ("helt rätt")
-    score +=5
-else: print("tyvärr fel")
+while True:
+    difficulty = input("Easy, hard or superhard?").lower()
 
-huvudstad = input("vad är sveriges huvudstad?").capitalize()
-if huvudstad == ("Stockholm"):
-    print ("helt rätt")
-    score +=5
-else: print("tyvärr fel")
+    if difficulty == "easy":
+        score += easy_quiz() 
 
-gymnasiet = input("vilket gymnasiet går du?").capitalize()
-if gymnasiet == ("Nti"):
-    print ("helt rätt")
-    score +=5
-else: print("tyvärr fel")
+    elif difficulty == "hard":
+        score = hard_quiz()
 
-mat = input("vad är din favorit mat?").capitalize()
-if mat == ("Pizza"):
-    print ("helt rätt")
-    score +=5
-else: print("tyvärr fel.")
+    elif difficulty == "superhard":
+        score = superhard_quiz()
 
-poäng = input("vill du se dina poäng?").capitalize()
-if poäng == ("Ja"):
-    
-    print ("Hej", score)
+    elif difficulty == "q":
+        break
 
+    poäng = input("vill du se dina poäng?").lower()
+    if poäng == ("ja"):
 
-
-
+        print ("Hej", "score")
+        
+        print(f"Quiz over, you got {score} points.")

@@ -12,11 +12,15 @@ while True:
        elif menyval == "2":
              Penna = input("vad vill du lägga i väskan?")
              travelbag.append(Penna)
+             print(travelbag)
+             
 
        elif menyval == "3":
               Mobil = input("vad vill ta bort från väskan?")
               travelbag.remove(Mobil)
+              print(travelbag)
+              
 
        elif menyval == "4":
               break
-              
+       

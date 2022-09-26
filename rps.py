@@ -33,4 +33,5 @@ elif computer == "paper" and user == "scrissors":
     print("user wins")
 
 elif user == "scrissors" and computer == "scrissors":
-    print("equilibrium ")
+    print("equilibrium ") 
+    
